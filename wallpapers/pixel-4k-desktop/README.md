@@ -1,0 +1,1 @@
+I found these wallpapers from a reddit post I lost a while ago, so all credit goes to them (whoever they are, I sadly cannot remember the post name or user name), they are 4k desktop versions of the default google pixel wallpapers.
