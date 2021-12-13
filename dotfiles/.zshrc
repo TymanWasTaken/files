@@ -29,3 +29,4 @@ export NVM_DIR="$HOME/.nvm"
 
 alias ls="ls --color"
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+export GPG_TTY=$(tty)
