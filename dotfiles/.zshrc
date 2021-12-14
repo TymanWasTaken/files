@@ -7,6 +7,11 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 #---------------------------------------------------------------------------------#
+### Add things to PATH
+path+=("$HOME/.pyenv/bin")
+path+=("$HOME/.local/bin")
+export PATH
+#--------------------------------------------------------------------------------#
 ### Zsh config
 # Configure command history saving
 HISTFILE=~/.zsh_history # Sets history file
@@ -67,8 +72,3 @@ fi
 ### Fixes
 export GPG_TTY=$(tty) # Fix gpg signing
 #---------------------------------------------------------------------------------#
-### Add things to PATH
-path+=("$HOME/.pyenv/bin")
-path+=("$HOME/.local/bin")
-export PATH
-
