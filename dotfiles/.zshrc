@@ -71,4 +71,7 @@ fi
 #---------------------------------------------------------------------------------#
 ### Fixes
 export GPG_TTY=$(tty) # Fix gpg signing
+bindkey '^H' backward-kill-word # Fix ctrl+backspace
+bindkey "^[[1;5C" forward-word # Fix ctrl+→
+bindkey "^[[1;5D" backward-word # Fix ctrl+←
 #---------------------------------------------------------------------------------#
