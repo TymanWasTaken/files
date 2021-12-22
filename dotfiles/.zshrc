@@ -65,7 +65,7 @@ zinit light-mode for \
 ### Zinit plugins
 zinit ice depth=1; zinit light romkatv/powerlevel10k # Powerlevel10k
 zinit light zsh-users/zsh-autosuggestions # Autosuggestions
-zinit light zsh-users/zsh-syntax-highlighting # Syntax highlighting
+zinit light zdharma-continuum/fast-syntax-highlighting # Syntax highlighting
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
