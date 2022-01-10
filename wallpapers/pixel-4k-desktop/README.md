@@ -1,1 +1,1 @@
-I found these wallpapers from a reddit post I lost a while ago, so all credit goes to them (whoever they are, I sadly cannot remember the post name or user name), they are 4k desktop versions of the default google pixel wallpapers.
+I found these wallpapers from a [reddit post](https://www.reddit.com/r/GooglePixel/comments/dnv9bk/google_pixel_wallpapers_uhd_4k_desktop/) I found a while ago, so all credit goes to them, they are 4k desktop versions of the default google pixel wallpapers.
