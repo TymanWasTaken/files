@@ -35,8 +35,7 @@ if ls "$HOME/.pyenv" &> /dev/null; then
 fi
 #---------------------------------------------------------------------------------#
 ### Aliases
-alias ls="ls --color" # `ls` colors
-alias sudo="doas" # doas instead of sudo
+alias ls="exa" # `exa` instead of `ls`
 eval $(thefuck --alias) # `fuck` alias
 #---------------------------------------------------------------------------------#
 ### Setup zinit
