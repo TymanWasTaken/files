@@ -11,6 +11,7 @@ fi
 path+=("$HOME/.pyenv/bin")
 path+=("$HOME/.local/bin")
 path+=("$HOME/Android/Sdk/platform-tools")
+path+=("$HOME/.cargo/bin")
 export PATH
 #--------------------------------------------------------------------------------#
 ### Zsh config
@@ -30,13 +31,13 @@ fi
 #---------------------------------------------------------------------------------#
 ### Load pyenv
 if ls "$HOME/.pyenv" &> /dev/null; then
-    eval "$(pyenv init --path)"
-    eval "$(pyenv virtualenv-init -)"
+    eval "$(pyenv init -)"
 fi
 #---------------------------------------------------------------------------------#
 ### Aliases
 alias ls="ls --color" # `ls` colors
 alias sudo="doas" # doas instead of sudo
+eval $(thefuck --alias) # `fuck` alias
 #---------------------------------------------------------------------------------#
 ### Setup zinit
 # Added by Zinit's installer
@@ -72,7 +73,14 @@ zinit light zdharma-continuum/fast-syntax-highlighting # Syntax highlighting
 #---------------------------------------------------------------------------------#
 ### Fixes
 export GPG_TTY=$(tty) # Fix gpg signing
-bindkey '^H' backward-kill-word # Fix ctrl+backspace
-bindkey "^[[1;5C" forward-word # Fix ctrl+→
-bindkey "^[[1;5D" backward-word # Fix ctrl+←
+## A giant handful of key fixes
+bindkey "^[[3~" delete-char
+bindkey "^[[3;2~" delete-char
+bindkey  "^[[H"   beginning-of-line
+bindkey  "^[[F"   end-of-line
+bindkey "^Z" undo
+bindkey "^[[3;5~" kill-word
+bindkey "^H" backward-kill-word
+bindkey "^[[1;5D" backward-word
+bindkey "^[[1;5C" forward-word
 #---------------------------------------------------------------------------------#

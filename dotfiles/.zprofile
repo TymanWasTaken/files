@@ -5,3 +5,8 @@ export MOZ_USE_XINPUT2=1 # Use pixel-by-pixel touchpad scrolling in Firefox
 export MOZ_ENABLE_WAYLAND=1 # Use experimental native Wayland support for Firefox and Thunderbird
 # export GTK_USE_PORTAL=1 # Try to use native file pickers in GTK programs
 #---------------------------------------------------------------------------------#
+### Load pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init --path)"
+#---------------------------------------------------------------------------------#
