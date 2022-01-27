@@ -23,11 +23,7 @@ SAVEHIST=1000 # Sets lines to save history for
 bindkey -e
 #---------------------------------------------------------------------------------#
 ### Load nvm (node version manager)
-if ls "$HOME/.nvm" &> /dev/null; then
-    export NVM_DIR="$HOME/.nvm"
-    [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-    [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-fi
+source /usr/share/nvm/init-nvm.sh
 #---------------------------------------------------------------------------------#
 ### Load pyenv
 if ls "$HOME/.pyenv" &> /dev/null; then
