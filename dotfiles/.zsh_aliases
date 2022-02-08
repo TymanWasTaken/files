@@ -1,0 +1,18 @@
+alias ga="git add -A"
+gc() {
+	git commit -S -m "$@"
+}
+alias gp="git push"
+alias fmt="yarn format"
+alias ..="cd .."
+alias ....="cd ../.."
+alias ......="cd ../../.."
+psh() {
+	fmt && ga && gc $@ && gp
+}
+alias stop="doas systemctl stop"
+alias start="doas systemctl start"
+alias ls="exa"
+alias la="exa -a"
+alias lal="exa -al"
+alias tree="exa --tree"

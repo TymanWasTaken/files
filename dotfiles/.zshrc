@@ -31,7 +31,7 @@ if ls "$HOME/.pyenv" &> /dev/null; then
 fi
 #---------------------------------------------------------------------------------#
 ### Aliases
-alias ls="exa" # `exa` instead of `ls`
+source "$HOME/.zsh_aliases"
 eval $(thefuck --alias) # `fuck` alias
 #---------------------------------------------------------------------------------#
 ### Setup zinit
