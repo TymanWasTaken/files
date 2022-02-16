@@ -57,14 +57,7 @@ zinit light-mode for \
     zdharma-continuum/zinit-annex-rust
 
 # End of Zinit's installer chunk
-#---------------------------------------------------------------------------------#
-### Zinit plugins
-zinit ice depth=1; zinit light romkatv/powerlevel10k # Powerlevel10k
-zinit light zsh-users/zsh-autosuggestions # Autosuggestions
-zinit light zdharma-continuum/fast-syntax-highlighting # Syntax highlighting
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+[[ ! -f ~/.zinit.zsh ]] || source ~/.zinit.zsh # Load zinit plugins and themes
 #---------------------------------------------------------------------------------#
 ### Fixes
 export GPG_TTY=$(tty) # Fix gpg signing
