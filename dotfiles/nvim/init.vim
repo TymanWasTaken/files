@@ -1,20 +1,19 @@
 call plug#begin()
-Plug 'liuchengxu/space-vim-dark'
-Plug 'vim-airline/vim-airline'
-Plug 'wlangstroth/vim-racket'
-Plug 'sheerun/vim-polyglot'
-Plug 'leafgarland/typescript-vim'
-Plug 'rust-lang/rust.vim'
-Plug 'preservim/tagbar'
-Plug 'universal-ctags/ctags'
-Plug 'luochen1990/rainbow'
-Plug 'vim-syntastic/syntastic'
-Plug 'itchyny/lightline.vim'
-Plug 'tpope/vim-surround'
-Plug 'neoclide/coc.nvim', { 'branch': 'release' }
-Plug 'tommcdo/vim-lion'
-Plug 'Shirk/vim-gas'
-Plug 'ntpeters/vim-better-whitespace'
+Plug 'liuchengxu/space-vim-dark' " Theme
+Plug 'vim-airline/vim-airline' " Status bar
+Plug 'sheerun/vim-polyglot' " Collection of language packs
+Plug 'leafgarland/typescript-vim' " Typescript syntax support
+Plug 'rust-lang/rust.vim' " Rust support
+Plug 'preservim/tagbar' " Tag menu to show program layout
+Plug 'universal-ctags/ctags' " Generates tags
+Plug 'luochen1990/rainbow' " Rainbow parentheses
+Plug 'vim-syntastic/syntastic' " Syntax checking plugin
+Plug 'itchyny/lightline.vim' " Simple bottom bar
+Plug 'tpope/vim-surround' " Allows changing surrounding quotes and things
+Plug 'neoclide/coc.nvim', { 'branch': 'release' } " Language server support
+Plug 'tommcdo/vim-lion' " Allow aligning code by an amount of chars
+Plug 'Shirk/vim-gas' " GNU syntax support
+Plug 'ntpeters/vim-better-whitespace' " Shows whitespace at the end of lines
 call plug#end()
 
 " Get syntax files from config folder
