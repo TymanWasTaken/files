@@ -16,3 +16,9 @@ alias ls="exa"
 alias la="exa -a"
 alias lal="exa -al"
 alias tree="exa --tree"
+if [[ $XDG_SESSION_TYPE = 'wayland' ]]; then
+	alias clip="wl-copy"
+else
+	alias clip="xclip -selection clipboard"
+fi
+alias 2fa="TOKEN=\$(yad --title=\"Authy\" --text=\"What code would you like to copy?\" --entry) && mambembe-cli get-token --service-name \$TOKEN | tr -dc '0-9' | clip"
