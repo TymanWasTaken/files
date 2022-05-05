@@ -7,6 +7,9 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 #---------------------------------------------------------------------------------#
+### Load nvm (node version manager)
+source /usr/share/nvm/init-nvm.sh
+#---------------------------------------------------------------------------------#
 ### Add things to PATH
 path+=("$HOME/.pyenv/bin")
 path+=("$HOME/.local/bin")
@@ -16,14 +19,13 @@ export PATH
 #--------------------------------------------------------------------------------#
 ### Zsh config
 # Configure command history saving
-HISTFILE=~/.zsh_history # Sets history file
-HISTSIZE=1000 # Sets lines to save history for
-SAVEHIST=1000 # Sets lines to save history for
+HISTFILE="$HOME/.zsh_history"
+HISTSIZE=500000
+SAVEHIST=500000
+setopt INC_APPEND_HISTORY
+setopt SHARE_HISTORY
 # Configure emacs keys
 bindkey -e
-#---------------------------------------------------------------------------------#
-### Load nvm (node version manager)
-source /usr/share/nvm/init-nvm.sh
 #---------------------------------------------------------------------------------#
 ### Load pyenv
 if ls "$HOME/.pyenv" &> /dev/null; then

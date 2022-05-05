@@ -22,3 +22,7 @@ else
 	alias clip="xclip -selection clipboard"
 fi
 alias 2fa="TOKEN=\$(yad --title=\"Authy\" --text=\"What code would you like to copy?\" --entry) && mambembe-cli get-token --service-name \$TOKEN | tr -dc '0-9' | clip"
+ytp() { AUDIOFILE="$(mktemp -u)" && yt-dlp --default-search ytsearch "$@" -f ba --output $AUDIOFILE && cvlc $AUDIOFILE --play-and-exit && rm $AUDIOFILE }
+zshdir() {
+  zsh -c "cd $@; zsh -i"
+}

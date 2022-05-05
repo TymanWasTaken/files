@@ -14,6 +14,8 @@ Plug 'neoclide/coc.nvim', { 'branch': 'release' } " Language server support
 Plug 'tommcdo/vim-lion' " Allow aligning code by an amount of chars
 Plug 'Shirk/vim-gas' " GNU syntax support
 Plug 'ntpeters/vim-better-whitespace' " Shows whitespace at the end of lines
+Plug 'chrisbra/SudoEdit.vim' " Allow editing root files
+Plug 'mg979/vim-visual-multi', {'branch': 'master'} " Multi curser vim
 call plug#end()
 
 " Get syntax files from config folder
