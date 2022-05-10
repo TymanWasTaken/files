@@ -10,8 +10,8 @@ alias ......="cd ../../.."
 psh() {
 	fmt && ga && gc "$@" && gp
 }
-alias stop="doas systemctl stop"
-alias start="doas systemctl start"
+alias stop="sudo systemctl stop"
+alias start="sudo systemctl start"
 alias ls="exa"
 alias la="exa -a"
 alias lal="exa -al"
