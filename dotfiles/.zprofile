@@ -7,7 +7,8 @@ if [[ $XDG_SESSION_TYPE = 'wayland' ]]; then
 else
 	export PLASMA_USE_QT_SCALING=1 # Make Plasma work properly with high DPI scaling on X11
 fi
-# export GTK_USE_PORTAL=1 # Try to use native file pickers in GTK programs
+## Below is disabled because it causes firefox to stop antialiasing fonts in wayland for some reason
+#export GTK_USE_PORTAL=1 # Try to use native file pickers in GTK programs
 #---------------------------------------------------------------------------------#
 ### Load pyenv
 export PYENV_ROOT="$HOME/.pyenv"
