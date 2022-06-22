@@ -26,3 +26,9 @@ ytp() { AUDIOFILE="$(mktemp -u)" && yt-dlp --default-search ytsearch "$@" -f ba 
 zshdir() {
   zsh -c "cd $@; zsh -i"
 }
+mgc ()
+{
+    mambembe-cli get-token -s "$@" | fzf --reverse -0 -1 | rg -oP 'Token: "\K\d+' | xclip -i -selection clipboard
+}
+alias yarn-classic="corepack prepare yarn@1.22.19 --activate"
+alias yarn-modern="corepack prepare yarn@3.2.1 --activate"

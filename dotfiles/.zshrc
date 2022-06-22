@@ -34,7 +34,7 @@ fi
 #---------------------------------------------------------------------------------#
 ### Aliases
 source "$HOME/.zsh_aliases"
-eval $(thefuck --alias) # `fuck` alias
+#eval $(thefuck --alias) # `fuck` alias
 #---------------------------------------------------------------------------------#
 ### Setup zinit
 # Added by Zinit's installer
@@ -62,7 +62,7 @@ zinit light-mode for \
 [[ ! -f ~/.zinit.zsh ]] || source ~/.zinit.zsh # Load zinit plugins and themes
 #---------------------------------------------------------------------------------#
 ### Fixes
-export GPG_TTY=$(tty) # Fix gpg signing
+export GPG_TTY=$TTY # Fix gpg signing
 ## A giant handful of key fixes
 bindkey "^[[3~" delete-char
 bindkey "^[[3;2~" delete-char
@@ -74,3 +74,7 @@ bindkey "^H" backward-kill-word
 bindkey "^[[1;5D" backward-word
 bindkey "^[[1;5C" forward-word
 #---------------------------------------------------------------------------------#
+### Gitea autocompletions
+if ls "$HOME/.config/tea/autocomplete.zsh" &>/dev/null; then
+    PROG=tea _CLI_ZSH_AUTOCOMPLETE_HACK=1 source "/home/tyman/.config/tea/autocomplete.zsh"
+fi
